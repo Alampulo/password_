@@ -11,3 +11,6 @@
 class Password:
 
        password_list = []
+ def save_password(self):
+
+        Password.password_list.append(self)
