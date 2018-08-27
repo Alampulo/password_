@@ -43,3 +43,9 @@ class passwords:
         save contact object into password_list
         '''
         passwords.password_list.append(self)
+
+    def delete_account(self):
+        '''
+        delete account
+        '''
+        passwords.password_list.remove(self)
