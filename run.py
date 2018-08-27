@@ -56,6 +56,19 @@ def check_existing_account(account_name):
     return passwords.display_accounts()
 
 
+def main():
+    print("****************karribu sana kwa Password Locker*************")
+    print("\n")
+    print("Enter your name: ")
+    username = input()
+    print("*"*78)
+    print(f"Hello {username}.\nEnter a password or automatically generate password by system?")
+    print('''
+        Press:
+                    g- automatically generate new password
+                    c- create your own password
+          ''')
+
 
 
 if __name__ == '__main__':
