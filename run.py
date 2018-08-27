@@ -20,6 +20,14 @@ def generate_password(user):
     '''
     user.generate_password()
 
+#methods for passwords
+def create_account(account_name, user_name, password):
+    '''
+    function to create new account
+    '''
+    new_account = passwords(account_name, user_name, password)
+    return new_account
+
 
 
 
