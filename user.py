@@ -9,3 +9,10 @@ class user:
     """
     created a list where all new user objects will be stored
     """
+
+    def __init__(self, username, email, password):
+        """
+        the __init__ method is for defining the properties of the created class User
+        """
+        self.username = username
+        self.password = password
