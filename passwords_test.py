@@ -1,5 +1,6 @@
-import unittest
-from password import Password
+import unittest #import the unittest module
+import pyperclip
+from password import passwords #importing
 
     class TestPassword(unittest.TestCase):
     def setUp(self):
