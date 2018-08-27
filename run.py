@@ -68,6 +68,15 @@ def main():
                     g- automatically generate new password
                     c- create your own password
           ''')
+          pwd_click = input()
+    if (pwd_click  == 'g'):
+        chars = 'abcdefGHIJKlmn1256784903-@!&#.' #characters to choose from
+        length = int(input("Enter the length of password you want: "))
+        pwdinput = ''
+        for c in range(length):
+            pwdinput += random.choice(chars) #generate random password
+        print (pwdinput)
+        print(f"{username} your password is {pwdinput}")
 
 
 
