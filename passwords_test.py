@@ -33,6 +33,11 @@ class TestPasswords(unittest.TestCase):
         '''
         test if the account is saved into the passwords list
         '''
+    def test_save_multiple_accounts(self): #third test
+        '''
+        test to check if one can save multiple accounts
+        '''
+            
         self.new_account.save_account() #saving the new account
         self.assertEqual(len(passwords.password_list),1)
  if __name__ ==  '__main__':
