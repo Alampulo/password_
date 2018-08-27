@@ -29,5 +29,11 @@ class TestPasswords(unittest.TestCase):
         self.assertEqual(self.new_account.user_name,"Testname")
         self.assertEqual(self.new_account.password,"TestPass")
 
+    def test_save_account(self): #second test
+        '''
+        test if the account is saved into the passwords list
+        '''
+        self.new_account.save_account() #saving the new account
+        self.assertEqual(len(passwords.password_list),1)
  if __name__ ==  '__main__':
     unittest.main(
