@@ -39,17 +39,20 @@ def del_account(account):
     function to delete account
     '''
     account.delete_account()
+
 def find_account(account_name):
     '''
     function to find account by account name
     '''
     return passwords.find_by_account(account_name)
+
 def check_existing_account(account_name):
     '''
     function that checks if account exists
     '''
     return passwords.account_exists(account_name)
-    def display_accounts():
+
+def display_accounts():
     '''
     function that returns saved accounts
     '''
@@ -57,7 +60,7 @@ def check_existing_account(account_name):
 
 
 def main():
-    print("****************karribu sana kwa Password Locker*************")
+    print("****************Welcome to Password Locker*************")
     print("\n")
     print("Enter your name: ")
     username = input()
@@ -68,7 +71,7 @@ def main():
                     g- automatically generate new password
                     c- create your own password
           ''')
-          pwd_click = input()
+    pwd_click = input()
     if (pwd_click  == 'g'):
         chars = 'abcdefGHIJKlmn1256784903-@!&#.' #characters to choose from
         length = int(input("Enter the length of password you want: "))
@@ -78,7 +81,7 @@ def main():
         print (pwdinput)
         print(f"{username} your password is {pwdinput}")
 
-        elif (pwd_click == 'c'):
+    elif (pwd_click == 'c'):
         print("Input password: ")
         pwdinput = input()
         print(f"{username} your password is {pwdinput}")
@@ -121,7 +124,7 @@ def main():
                              #create and save account credentials
                 print('\n' * 1)
                 print (f"New account {account_name} created.")
-                print('\n' * 1
+                print('\n' * 1)
 
             elif short_code == 'd':
                 if display_accounts():
@@ -152,7 +155,7 @@ def main():
                 print("Thanks")
                 break
             else:
-                print("Sorry Yoh shit input! Try thuh short codes")
+                print("Sorry wrong input! Please use the short codes")
 
 
 if __name__ == '__main__':
