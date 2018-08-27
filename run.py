@@ -49,6 +49,12 @@ def check_existing_account(account_name):
     function that checks if account exists
     '''
     return passwords.account_exists(account_name)
+    def display_accounts():
+    '''
+    function that returns saved accounts
+    '''
+    return passwords.display_accounts()
+
 
 
 
