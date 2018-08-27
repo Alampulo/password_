@@ -22,3 +22,10 @@ class user:
         method saves a new user into the user_list
         """
         User.user_list.append(self)
+
+def generate_password(self, account_password):
+        print("How many digits would you like 4 ur  password?")
+        y = input()
+        for x in range (y):
+            account_password = random.randint(1, 10)
+            print(account_password)
