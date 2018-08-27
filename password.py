@@ -37,3 +37,9 @@ class passwords:
         self.account_name = account_name
         self.user_name = user_name
         self.password = password
+
+    def save_account(self):
+        '''
+        save contact object into password_list
+        '''
+        passwords.password_list.append(self)
