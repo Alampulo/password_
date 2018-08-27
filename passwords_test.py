@@ -50,8 +50,17 @@ self.new_account.save_account()
         test_account = passwords("Account","Testname","TestPass")
         test_account.save_account()
         self.new_account.delete_account() #deleting credentials
-        self.assertEqual(len(passwords.password_list),1)        
-        self.new_account.save_account() #saving the new account
         self.assertEqual(len(passwords.password_list),1)
+        def test_find_account_by_account_name(self): #fifth test
+        '''
+        test to search for account details
+        '''
+        self.new_account.save_account()
+        test_account = passwords("Account","Testname","TestPass")
+        test_account.save_account()
+        found_account = passwords.find_by_account("Account")
+        self.assertEqual(found_account.user_name, test_account.user_name)
+
+
  if __name__ ==  '__main__':
     unittest.main(
