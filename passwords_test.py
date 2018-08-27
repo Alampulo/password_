@@ -1,7 +1,7 @@
 import unittest
 from password import Password
 
-class TestPassword(unittest.TestCase):
+    class TestPassword(unittest.TestCase):
     def setUp(self):
      self.new_user = User("first_name","last_name","special_key")
 
