@@ -1,7 +1,6 @@
 import unittest #import the unittest module
 import pyperclip
-from password import passwords #importing
-
+from password import passwords #importing credentials class
 
 class TestPasswords(unittest.TestCase):
     '''
@@ -33,11 +32,14 @@ class TestPasswords(unittest.TestCase):
         '''
         test if the account is saved into the passwords list
         '''
+        self.new_account.save_account() #saving the new account
+        self.assertEqual(len(passwords.password_list),1)
+
     def test_save_multiple_accounts(self): #third test
         '''
         test to check if one can save multiple accounts
         '''
-self.new_account.save_account()
+        self.new_account.save_account()
         test_account = passwords("Account","Testname","TestPass")
         test_account.save_account()
         self.assertEqual(len(passwords.password_list),2)
@@ -51,7 +53,8 @@ self.new_account.save_account()
         test_account.save_account()
         self.new_account.delete_account() #deleting credentials
         self.assertEqual(len(passwords.password_list),1)
-        def test_find_account_by_account_name(self): #fifth test
+
+    def test_find_account_by_account_name(self): #fifth test
         '''
         test to search for account details
         '''
@@ -60,6 +63,7 @@ self.new_account.save_account()
         test_account.save_account()
         found_account = passwords.find_by_account("Account")
         self.assertEqual(found_account.user_name, test_account.user_name)
+
     def test_account_exists(self): #sixth test
         '''
         test to check if account really exists
@@ -69,12 +73,12 @@ self.new_account.save_account()
         test_account.save_account()
         account_exists = passwords.account_exists("Account")
         self.assertTrue(account_exists)
+
     def test_display_accounts(self): #seventh test
         '''
         test to display accounts
         '''
         self.assertEqual(passwords.display_accounts(),passwords.password_list)
 
-
- if __name__ ==  '__main__':
-    unittest.main(
+if __name__ == '__main__':
+    unittest.main()
