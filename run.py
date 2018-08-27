@@ -34,6 +34,12 @@ def save_account(account):
     '''
     account.save_account()
 
+def del_account(account):
+    '''
+    function to delete account
+    '''
+    account.delete_account()
+
 
 
 
