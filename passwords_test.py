@@ -60,6 +60,15 @@ self.new_account.save_account()
         test_account.save_account()
         found_account = passwords.find_by_account("Account")
         self.assertEqual(found_account.user_name, test_account.user_name)
+    def test_account_exists(self): #sixth test
+        '''
+        test to check if account really exists
+        '''
+        self.new_account.save_account()
+        test_account = passwords("Account","Testname","TestPass")
+        test_account.save_account()
+        account_exists = passwords.account_exists("Account")
+        self.assertTrue(account_exists)
 
 
  if __name__ ==  '__main__':
