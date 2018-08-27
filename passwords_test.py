@@ -2,22 +2,32 @@ import unittest #import the unittest module
 import pyperclip
 from password import passwords #importing
 
-    class TestPassword(unittest.TestCase):
+
+class TestPasswords(unittest.TestCase):
+    '''
+    defines test cases for the password class behaviours
+    Args:
+        unittest.TestCase: helps in creating test cases
+    '''
     def setUp(self):
-     self.new_user = User("first_name","last_name","special_key")
+        '''
+        set up method to run before each test cases
+        '''
+        self.new_account = passwords("Account","Testname","TestPass")
 
-    def test_init(self):
-       self.assertEqual(self.new_user.first_name,"buju")
-       self.assertEqual(self.new_user.last_name,"bantom")
-       self.assertEqual(self.new_user.special_key,"13039042")
-  # test2
-  if __name__ == '__main__':
-    unittest.main()
+    def tearDown(self):
+        '''
+        clean up after each test case has run
+        '''
+        passwords.password_list = []
 
-        def test_save_password(self):
-
-        self.new_password.save_password() # saving the new contact
-        self.assertEqual(len(Password.password_list),1)
+    def test_init(self): #first test
+        '''
+        test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_account.account_name,"Account")
+        self.assertEqual(self.new_account.user_name,"Testname")
+        self.assertEqual(self.new_account.password,"TestPass")
 
  if __name__ ==  '__main__':
     unittest.main(
