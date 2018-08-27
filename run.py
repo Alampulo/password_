@@ -123,6 +123,37 @@ def main():
                 print (f"New account {account_name} created.")
                 print('\n' * 1
 
+            elif short_code == 'd':
+                if display_accounts():
+                    print("Here are your accounts: ")
+                    print('\n')
+                    for account in display_accounts():
+                        print(f"{account.account_name}  {account.user_name}  {account.password}")
+                        print('\n')
+                else:
+                    print('\n')
+                    print("Sorry...You dont have any saved acccounts")
+                    print('\n')
+
+            elif short_code == 'f':
+                print("Enter name of the account you are searching for: ")
+                search_account_name = input()
+                if check_existing_account(search_account_name):
+                    search_account = find_account(search_account_name)
+                    print(f"{search_account.account_name}")
+                    print('-' * 20)
+                    print(f"User Name...................{search_account.user_name}")
+                    print(f"Password...................{search_account.password}")
+
+                else:
+                    print("Account does not exist")
+
+            elif short_code == 'ex':
+                print("Thanks")
+                break
+            else:
+                print("Sorry Yoh shit input! Try thuh short codes")
+
 
 if __name__ == '__main__':
     main()
