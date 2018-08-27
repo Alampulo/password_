@@ -37,7 +37,20 @@ class TestPasswords(unittest.TestCase):
         '''
         test to check if one can save multiple accounts
         '''
-            
+self.new_account.save_account()
+        test_account = passwords("Account","Testname","TestPass")
+        test_account.save_account()
+        self.assertEqual(len(passwords.password_list),2)
+
+    def test_delete_passwords(self): #fourth test
+        '''
+        test to check if one can delete account passwords
+        '''
+        self.new_account.save_account()
+        test_account = passwords("Account","Testname","TestPass")
+        test_account.save_account()
+        self.new_account.delete_account() #deleting credentials
+        self.assertEqual(len(passwords.password_list),1)        
         self.new_account.save_account() #saving the new account
         self.assertEqual(len(passwords.password_list),1)
  if __name__ ==  '__main__':
