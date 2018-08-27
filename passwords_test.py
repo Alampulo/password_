@@ -69,6 +69,11 @@ self.new_account.save_account()
         test_account.save_account()
         account_exists = passwords.account_exists("Account")
         self.assertTrue(account_exists)
+    def test_display_accounts(self): #seventh test
+        '''
+        test to display accounts
+        '''
+        self.assertEqual(passwords.display_accounts(),passwords.password_list)
 
 
  if __name__ ==  '__main__':
