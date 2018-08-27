@@ -78,6 +78,46 @@ def main():
         print (pwdinput)
         print(f"{username} your password is {pwdinput}")
 
+        elif (pwd_click == 'c'):
+        print("Input password: ")
+        pwdinput = input()
+        print(f"{username} your password is {pwdinput}")
+
+        print("\n"*2)
+
+    save_user(create_user(username,pwdinput))
+    #create and save user passwords
+    print('\n' * 2)
+    print (f"New user {username} created.")
+    print('\n' * 2)
+
+    print("To continue reenter your details")
+    print("*"*78)
+    print("Enter your username : ")
+    name = input()
+    print("Enter your password: ")
+    pwd = input()
+    if (name == username and pwd == pwdinput):
+        print('\n')
+        while True:
+            print('''Use these short codes:
+                  c - create new account
+                  d - display accounts
+                  f - find accounts
+                  ex - exit accounts
+                  ''')
+            short_code = input().lower()
+            if short_code == 'c':
+                print("*************Create new account***********")
+                print("-"*80)
+                print("Account Name: ")
+                account_name = input()
+                print("User Name: ")
+                user_name = input()
+                print("Password for account: ")
+                password = input()
+            
+
 
 
 if __name__ == '__main__':
