@@ -49,3 +49,16 @@ class passwords:
         delete account
         '''
         passwords.password_list.remove(self)
+
+    @classmethod
+    def find_by_account(cls,account_name):
+        '''
+        search for account, returns a list containing the account passwords
+        args:
+             account_name: that will be used to search
+        Returns:
+            account passwords
+        '''
+        for account in cls.password_list:
+            if account.account_name == account_name:
+                return account
