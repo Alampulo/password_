@@ -28,6 +28,12 @@ def create_account(account_name, user_name, password):
     new_account = passwords(account_name, user_name, password)
     return new_account
 
+def save_account(account):
+    '''
+    function to save account
+    '''
+    account.save_account()
+
 
 
 
