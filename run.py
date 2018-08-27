@@ -116,8 +116,12 @@ def main():
                 user_name = input()
                 print("Password for account: ")
                 password = input()
-            
 
+                save_account(create_account(account_name,user_name,password))
+                             #create and save account credentials
+                print('\n' * 1)
+                print (f"New account {account_name} created.")
+                print('\n' * 1
 
 
 if __name__ == '__main__':
