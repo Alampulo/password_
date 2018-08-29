@@ -47,7 +47,7 @@ def main():
     print("Enter your name: ")
     username = input()
     print("*"*78)
-    print(f"Hello {username}.\nEnter a password or automatically generate password by system?")
+    print(f'Hello {username}.\Enter a password or automatically generate password by system?')
     print('''
         Press:
                     g- automatically generate new password
